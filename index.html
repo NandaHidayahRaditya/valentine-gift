@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me? 💕</title>
+    <meta name="description" content="A sweet Valentine's Day message for someone special">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <canvas id="heartCanvas"></canvas>
+
+    <div class="sparkle-container" id="sparkleContainer"></div>
+
+    <main id="app">
+
+        <section id="page1" class="page active">
+            <div class="page-content">
+                <div class="floating-hearts">
+                    <span class="float-heart">💕</span>
+                    <span class="float-heart">💗</span>
+                    <span class="float-heart">💖</span>
+                </div>
+                <div class="glass-card main-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-main" id="mainQuestion">Do You Love Me?</h1>
+                    <p class="subtitle" id="subQuestion">Please say yes </p>
+                    <div class="button-group">
+                        <button id="yesBtn" class="btn btn-yes">
+                            <span class="btn-text">YES</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button id="noBtn" class="btn btn-no">
+                            <span class="btn-text">NO</span>
+                        </button>
+                    </div>
+                    <p id="noEscapeText" class="escape-text hidden"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page2" class="page">
+            <div class="page-content">
+                <div class="celebration-burst" id="celebrationBurst"></div>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <div class="emoji-bounce">🎉</div>
+                    <h1 class="title-cursive" id="confirmTitle">YAAAY! Kamu beneran mau 💗</h1>
+                    <div class="confirmation-box">
+                        <p id="confirmText">Sedikit Tebak Tebakan...</p>
+                        <div class="badge-container">
+                            <div class="badge">
+                                <span class="badge-text">Apa yang tetap bersinar terang walaupun langit sedang gelap gulita?</span>
+                                <div class="badge-sparkle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button id="nextToPage3" class="btn btn-primary">
+                            <span class="btn-text">Lanjut </span>
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button id="backToPage1" class="btn btn-ghost btn-small">Ulangi pertanyaan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page3" class="page">
+            <div class="page-content flower-page">
+                <div class="falling-petals" id="petalsContainer"></div>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-cursive" id="flowerTitle">"Ini aku waktu kecil, belum tahu apa-apa, tapi satu hal yang pasti aku pengen saat ini adalah selalu jadi seseorang yang bisa bikin kamu bahagia."</h1>
+                    <div class="bouquet-wrapper">
+                        <div class="bouquet-glow"></div>
+                        <div class="bouquet" id="bouquet">
+                            <img src="radit.jpg" alt="Buket Bunga" class="bouquet-img">
+                        </div>
+                    </div>
+                    <p id="bouquetMessage" class="bouquet-message hidden">Kita Terus Sama Sama Yaa 💕</p>
+                    <div class="button-group">
+                        <button id="takeBouquet" class="btn btn-primary">
+                            <span class="btn-text">CICK! </span>
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button id="nextToPage4" class="btn btn-primary hidden">
+                            <span class="btn-text">Next </span>
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page4" class="page">
+            <div class="page-content">
+                <div class="glass-card collage-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-cursive" id="collageTitle">My Piece Of A Diamond</h1>
+                    <p class="collage-subtitle" id="collageSubtitle">Ini adalah wujud dari potongan berlian yang aku punya 💕</p>
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="ayshi1.jpg" class="photo-preview" alt="Foto 1">
+                        </div>
+                        <div class="photo-item">
+                            <img src="ayshi4.jpg" class="photo-preview" alt="Foto 2">
+                        </div>
+                        <div class="photo-item">
+                            <img src="ayshi3.jpg" class="photo-preview" alt="Foto 3">
+                        </div>
+                        <div class="photo-item">
+                            <img src="ayshi5.jpg" class="photo-preview" alt="Foto 4">
+                        </div>
+                    </div>
+                    <button id="nextToPage5" class="btn btn-primary">
+                        <span class="btn-text">Satu halaman lagi… </span>
+                        <span class="btn-shine"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="page5" class="page">
+            <div class="page-content">
+                <div id="confettiContainer" class="confetti-container"></div>
+
+                <div class="envelope-wrapper" id="envelopeWrapper">
+                    <div class="envelope-container">
+                        <div class="envelope" id="envelope">
+                            <div class="envelope-back"></div>
+                            <div class="letter" id="letter">
+                                <div class="letter-content">
+                                    <span class="letter-heart">💕</span>
+                                    <span class="letter-text">For You</span>
+                                </div>
+                            </div>
+                            <div class="envelope-front"></div>
+                            <div class="envelope-flap"></div>
+                        </div>
+                    </div>
+                    <p class="envelope-hint" id="envelopeHint">Tap untuk membuka</p>
+                </div>
+
+                <div class="glass-card final-card hidden" id="finalContent">
+                    <div class="card-glow"></div>
+                    <div class="final-emoji">💞</div>
+                    <h1 class="title-cursive title-final" id="finalTitle">Happy Valentine, My Love 💞</h1>
+                    <div class="message-box">
+                        <div class="message-decoration">✨</div>
+                        <p id="finalMessage">
+                            A lil bit letter from me, Terimakasih yaa esih sudah mau ngasih kesempatan buat aku ditengah keraguan kamu karena masalalu. Suatu Kesempatan yang sangat sangat berharga buat aku untuk kenal lebih jauh dengan kamu, terimakasih udah hadir dihidup aku yg ngebuat keseharianku jadi lebih berwarna dan lebih berkesan meskipun first impression i ke kamu ngga yang wah banget karena aku liat tu u orangnya kaya yang cuek banget tapi ternyata selama ini aku salah ternnyata u orangnya care banget dan baik sama siapapun. Terimakasih yaa bb udah mau baik sama semua orang bahkan disaat u cape pun kamu ngga egois, big hug for u bb🫂, btw aku punya lagu buat kamu, coba klik dulu tombol dibawah. oh ya bb kalau sewaktu waktu kamu merasa insecure sama orang lain dari hal apapun itu inget lagu ini ya, kamu yang terbaik dimata aku sebagaimana diri kamu bb. fun fact aku suka lagu just the way you are by bruno mars ini karena ini lagu menggambarkan kamu banget, everytime i play this song it reminds me of you bb💕. Maaf ya esih aku baru bisa kasih ini yang ngga seberapa, tapi akan aku usahain akan kasih yg terbaik buat u yaa.<div class="message-decoration right">✨</div>
+                        </p>
+                        
+                        <div class="video-section" id="video-section">
+                        <button class="show-video-btn">A Song For U 💕</button>
+                        <video id="loveVideo" class="cute-video" controls>
+                            <source src="MyLove.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                    </div>
+                    <div class="button-group final-buttons">
+                        <button id="restartBtn" class="btn btn-ghost">
+                            <span class="btn-text">Restart </span>
+                        </button>
+                        <button id="copyBtn" class="btn btn-primary">
+                            <span class="btn-text"></span>
+                            <span class="btn-shine"></span> 
+                        </button>
+                    </div>
+                    <p id="copyNotif" class="copy-notif hidden">Pesan berhasil dicopy! </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
